@@ -217,41 +217,7 @@ Khi tích hợp kết quả thị giác từ bộ dữ liệu vào **Autonomous 
 
 ---
 
-## 9. GitHub Upload & Data Hosting Guidance
-
-Dung lượng toàn bộ thư mục `dataset/` hiện tại là **~97.8 MB** (400 ảnh PNG, mỗi ảnh ~244 KB, file lớn nhất 557 KB). Khi đưa lên GitHub, có 3 phương án quản lý phù hợp:
-
-### Phương án 1: Đẩy trực tiếp vào Git Repository (Khuyên dùng cho đồ án/chuyên đề)
-* Vì không có file nào vượt ngưỡng **100 MB** của GitHub (file lớn nhất chỉ 557 KB) và tổng dung lượng dưới ngưỡng khuyến cáo 1 GB của một repository, bạn hoàn toàn có thể commit và push trực tiếp:
-```bash
-git add dataset/
-git commit -m "feat(dataset): add WebVR-200 benchmark dataset with 200 pairs and documentation"
-git push origin main
-```
-
-### Phương án 2: Sử dụng Git LFS (Large File Storage) (Chuẩn mã nguồn mở chuyên nghiệp)
-Nếu muốn tách rời các file ảnh nhị phân khỏi lịch sử git commit thông thường:
-```bash
-# 1. Cài đặt Git LFS
-git lfs install
-
-# 2. Theo dõi toàn bộ file PNG trong dataset
-git lfs track "dataset/**/*.png"
-git add .gitattributes
-
-# 3. Commit và push bình thường
-git add dataset/
-git commit -m "chore(dataset): track dataset PNG images with Git LFS"
-git push origin main
-```
-
-### Phương án 3: Lưu trữ trên GitHub Releases hoặc Hugging Face Datasets
-* Nén thư mục `dataset/` thành file zip `WebVR-200.zip` (~95 MB).
-* Đính kèm vào mục **GitHub Releases (v1.0.0)** hoặc upload lên **Hugging Face Hub** (`datasets/username/webvr-200`).
-
----
-
-## 10. License & Citation
+## 9. License & Citation
 
 ### Bản quyền (License)
 Bộ dữ liệu được phát hành theo giấy phép **MIT License**. Bạn được tự do sử dụng, sao chép, tích hợp trong các nghiên cứu học thuật và ứng dụng công nghiệp.
