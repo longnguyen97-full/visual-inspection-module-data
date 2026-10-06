@@ -261,11 +261,10 @@ Nếu bạn sử dụng bộ dữ liệu này trong các bài báo khoa học ho
 
 ```bibtex
 @misc{webvr200_dataset_2026,
-  author = {Nguyen Hoang Bao Long and Cap Pham Dinh Thang},
+  author = {Nguyen Hoang Bao Long},
   title = {WebVR-200: A Benchmark Dataset for Web Visual Regression Testing and Agentic AI Grounding},
   year = {2026},
   publisher = {GitHub},
-  howpublished = {\url{https://github.com/your-username/chuyen-de-tot-nghiep}}
 }
 ```
 # visual-inspection-module-data
